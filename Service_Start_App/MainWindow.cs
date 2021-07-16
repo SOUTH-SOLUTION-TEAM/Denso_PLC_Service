@@ -390,6 +390,7 @@ namespace Denso_ORM_PLC_Service
         {
             try
             {
+                MessageBox.Show("9999");
                 if (this.WindowState != FormWindowState.Minimized)
                     return;
                 this.WindowState = FormWindowState.Normal;
