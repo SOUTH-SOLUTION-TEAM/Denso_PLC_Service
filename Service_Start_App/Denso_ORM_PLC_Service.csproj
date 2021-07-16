@@ -1,0 +1,475 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2423BE1F-8838-4BC2-A622-879B59651F4F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Denso_ORM_PLC_Service</RootNamespace>
+    <AssemblyName>Denso_ORM_PLC_Service</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\document+library+publish+read+scribd+share+write+icon-1320191838528180346.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0B5E1584969AEA7C1EE37A1D4D77E4D469A25128</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EasyModbus">
+      <HintPath>..\Denso_ORM_PLC_Service\bin\Debug\EasyModbus.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business_Layer\LogCreation.cs" />
+    <Compile Include="Business_Layer\Transaction.cs" />
+    <Compile Include="CommonClasses\CommonMethods.cs" />
+    <Compile Include="CommonClasses\CommonVariable.cs" />
+    <Compile Include="CommonClasses\PLC_Connectivity.cs" />
+    <Compile Include="Data_Layer\DatabaseConnections.cs" />
+    <Compile Include="Entity_Layer\DatabaseSettings.cs" />
+    <Compile Include="Entity_Layer\Transaction.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_1.Designer.cs">
+      <DependentUpon>Panel_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_10.Designer.cs">
+      <DependentUpon>Panel_10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_11.Designer.cs">
+      <DependentUpon>Panel_11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_12.Designer.cs">
+      <DependentUpon>Panel_12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_13.Designer.cs">
+      <DependentUpon>Panel_13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_14.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_14.Designer.cs">
+      <DependentUpon>Panel_14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_15.Designer.cs">
+      <DependentUpon>Panel_15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_16.Designer.cs">
+      <DependentUpon>Panel_16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_17.Designer.cs">
+      <DependentUpon>Panel_17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_18.Designer.cs">
+      <DependentUpon>Panel_18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_19.Designer.cs">
+      <DependentUpon>Panel_19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_2.Designer.cs">
+      <DependentUpon>Panel_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_20.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_20.Designer.cs">
+      <DependentUpon>Panel_20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_21.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_21.Designer.cs">
+      <DependentUpon>Panel_21.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_22.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_22.Designer.cs">
+      <DependentUpon>Panel_22.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_23.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_23.Designer.cs">
+      <DependentUpon>Panel_23.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_24.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_24.Designer.cs">
+      <DependentUpon>Panel_24.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_25.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_25.Designer.cs">
+      <DependentUpon>Panel_25.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_26.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_26.Designer.cs">
+      <DependentUpon>Panel_26.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_27.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_27.Designer.cs">
+      <DependentUpon>Panel_27.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_28.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_28.Designer.cs">
+      <DependentUpon>Panel_28.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_29.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_29.Designer.cs">
+      <DependentUpon>Panel_29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_3.Designer.cs">
+      <DependentUpon>Panel_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_30.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_30.Designer.cs">
+      <DependentUpon>Panel_30.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_31.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_31.Designer.cs">
+      <DependentUpon>Panel_31.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_32.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_32.Designer.cs">
+      <DependentUpon>Panel_32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_33.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_33.Designer.cs">
+      <DependentUpon>Panel_33.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_34.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_34.Designer.cs">
+      <DependentUpon>Panel_34.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_35.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_35.Designer.cs">
+      <DependentUpon>Panel_35.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_36.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_36.Designer.cs">
+      <DependentUpon>Panel_36.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_4.Designer.cs">
+      <DependentUpon>Panel_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_5.Designer.cs">
+      <DependentUpon>Panel_5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_6.Designer.cs">
+      <DependentUpon>Panel_6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_7.Designer.cs">
+      <DependentUpon>Panel_7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_8.Designer.cs">
+      <DependentUpon>Panel_8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Panel_9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Panel_9.Designer.cs">
+      <DependentUpon>Panel_9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_1.resx">
+      <DependentUpon>Panel_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_10.resx">
+      <DependentUpon>Panel_10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_11.resx">
+      <DependentUpon>Panel_11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_12.resx">
+      <DependentUpon>Panel_12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_13.resx">
+      <DependentUpon>Panel_13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_14.resx">
+      <DependentUpon>Panel_14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_15.resx">
+      <DependentUpon>Panel_15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_16.resx">
+      <DependentUpon>Panel_16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_17.resx">
+      <DependentUpon>Panel_17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_18.resx">
+      <DependentUpon>Panel_18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_19.resx">
+      <DependentUpon>Panel_19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_2.resx">
+      <DependentUpon>Panel_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_20.resx">
+      <DependentUpon>Panel_20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_21.resx">
+      <DependentUpon>Panel_21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_22.resx">
+      <DependentUpon>Panel_22.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_23.resx">
+      <DependentUpon>Panel_23.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_24.resx">
+      <DependentUpon>Panel_24.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_25.resx">
+      <DependentUpon>Panel_25.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_26.resx">
+      <DependentUpon>Panel_26.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_27.resx">
+      <DependentUpon>Panel_27.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_28.resx">
+      <DependentUpon>Panel_28.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_29.resx">
+      <DependentUpon>Panel_29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_3.resx">
+      <DependentUpon>Panel_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_30.resx">
+      <DependentUpon>Panel_30.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_31.resx">
+      <DependentUpon>Panel_31.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_32.resx">
+      <DependentUpon>Panel_32.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_33.resx">
+      <DependentUpon>Panel_33.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_34.resx">
+      <DependentUpon>Panel_34.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_35.resx">
+      <DependentUpon>Panel_35.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_36.resx">
+      <DependentUpon>Panel_36.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_4.resx">
+      <DependentUpon>Panel_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_5.resx">
+      <DependentUpon>Panel_5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_6.resx">
+      <DependentUpon>Panel_6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_7.resx">
+      <DependentUpon>Panel_7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_8.resx">
+      <DependentUpon>Panel_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Panel_9.resx">
+      <DependentUpon>Panel_9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\DensoLogo.png" />
+    <Content Include="Images\document+library+publish+read+scribd+share+write+icon-1320191838528180346.ico" />
+    <Content Include="Images\SatoLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

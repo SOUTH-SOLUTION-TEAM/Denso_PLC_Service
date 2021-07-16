@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Denso_ORM_PLC_Service", "Service_Start_App\Denso_ORM_PLC_Service.csproj", "{2423BE1F-8838-4BC2-A622-879B59651F4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2423BE1F-8838-4BC2-A622-879B59651F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2423BE1F-8838-4BC2-A622-879B59651F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2423BE1F-8838-4BC2-A622-879B59651F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2423BE1F-8838-4BC2-A622-879B59651F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5851EC3-3F51-4B27-906A-91ABC808784A}
+	EndGlobalSection
+EndGlobal
